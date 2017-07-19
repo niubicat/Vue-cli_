@@ -31,12 +31,14 @@ Vue 全家桶：
 ### 一、store
 
 #### modules 状态模块(vue中包含有多个状态模块)
-/**
+
+
  * @status
  * @mutations: 改变store状态的唯一方法，相当于react中的reducer方法
  * @actions
  * @getters
- */
+
+
 count moduleA = {
     state: {},
     mutations: {},
