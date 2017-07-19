@@ -1,5 +1,8 @@
+[*vue-element-admin*](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/store/modules/permission.js)
+[*登录权限篇*](https://juejin.im/post/591aa14f570c35006961acac)
+
 **************************
-Vue 全家桶：
+Vue 全家桶：vue(页面), vue-router(路由), vuex(状态管理), vue-resource/axios(异步action), vue-cli(构建工具)
 **************************
 
 ## Vue
@@ -28,15 +31,15 @@ Vue 全家桶：
 
 ## Vuex
 
-### 一、store
+### 二、tore
 
 #### modules 状态模块(vue中包含有多个状态模块)
 
 
- * @status
- * @mutations: 改变store状态的唯一方法，相当于react中的reducer方法
- * @actions
- * @getters
+ * @states: 单一全局状态和局部状态
+ * @mutations: 改变store状态的唯一方法，相当于react中的reducer方法,每一个 mutation 执行完成后都可以对应到一个新的状态（和 reducer 一样）
+ * @actions: mutation 像事件注册，需要相应的触发条件。而 Action 就那个管理触发条件的, Action 提交的是 mutation，而不是直接变更状态
+ * @getters: 多组件都使用这个状态，抽象出来共享，暴露为store.getters对象
 
 
 count moduleA = {
@@ -47,6 +50,11 @@ count moduleA = {
 }
 
 * 例如：permission.js 自定义路由权限状态模块
+
+### 三、组件/模版template
+
+* @mapGetters: 辅助函数仅仅是将store中的getters映射到局部计算属性中，用法和mapState类似
+
 
 
 
